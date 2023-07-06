@@ -1,0 +1,155 @@
+---
+title: "Modul 2 data3.2"
+author: "Anissa Maulidyah"
+date: '2022-04-11'
+output: html_document
+---
+
+```{r}
+library(readr)
+data3_2 <- read_csv("data3.2.csv")
+data3_2
+
+tahun=data3_2$tahun
+a=data3_2$`jenis barang A`
+b=data3_2$`jenis barang B`
+c=data3_2$`jenis barang C`
+
+a
+b
+c
+
+plot(tahun,a)
+
+plot(tahun,a, type="o")
+
+plot(tahun,a, type="o", col="blue")
+
+
+plot(tahun,a, type="o", col="green")
+
+plot(tahun,a, type="o", col="red")
+lines(tahun, b, type="o", col="blue")
+
+plot(tahun,a, type="o", col="red", ylim=c(70,180))
+lines(tahun, b, type="o", col="blue")
+
+plot(tahun,a, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue")
+lines(tahun, c, type="o", col="green")
+
+plot(tahun,a, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", pch=22, col="blue")
+lines(tahun, c, type="o", col="green")
+
+plot(tahun,a, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", pch=22, lty=2, col="blue")
+lines(tahun, c, type="o", col="green")
+
+plot(tahun,a, type="o", pch=22, lty=2, col="red", ylim=c(40,180))
+lines(tahun, b, type="o", pch=22, lty=2, col="blue")
+lines(tahun, c, pch=22, lty=2, type="o", col="green")
+
+plot(tahun,a, type="p", pch=22, lty=2, col="red", ylim=c(40,180))
+lines(tahun, b, type="p", pch=22, lty=2, col="blue")
+lines(tahun, c, pch=22, lty=2, type="p", col="green")
+
+plot(tahun,a, type="o", pch=22, lty=2, col="red", ylim=c(40,180))
+lines(tahun, b, type="p", pch=22, lty=2, col="blue")
+lines(tahun, c, pch=22, lty=2, type="l", col="green")
+
+plot.new()
+plot(tahun,a, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue")
+lines(tahun, c, type="o", col="green")
+title(main="data penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue")
+lines(tahun, c, type="o", col="green")
+title(main="data penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue")
+lines(tahun, c, type="o", col="green")
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), pch=21)
+title(main="penjualan barang A, B, c, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue")
+lines(tahun, c,type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="o", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), lty=23)
+lines(tahun, b, type="o", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), lty=23)
+lines(tahun, b, type="o", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), lty=23)
+lines(tahun, b, type="l", col="blue",lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot.new()
+plot(tahun, Total, type="o", col="red", ylim=c(40,180))
+lines(tahun, b, type="l", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), xaxt="n")
+axis(at=2001:2007, side = 1, labels = c("A","B","C","D","E","F","G"))
+lines(tahun, b, type="l", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), xaxt="n")
+axis(at=2001:2007, side = 1, labels = c("Tahun 1","Tahun 2","Tahun 3","Tahun 4","Tahun 5","Tahun 6","Tahun 7"))
+lines(tahun, b, type="l", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+Total = a
+plot(tahun, Total, type="o", col="red", ylim=c(40,180), xaxt="n")
+axis(at=2001:2007, side = 3, labels = c("Tahun 1","Tahun 2","Tahun 3","Tahun 4","Tahun 5","Tahun 6","Tahun 7"))
+lines(tahun, b, type="l", col="blue", lty=23)
+lines(tahun, c, type="o", col="green", lty=23)
+legend(2001,160,c("jenis barang A", "jenis barang B", "jenis barang C"), cex=0.8, col=c("red","blue","green"), lty=30)
+title(main="penjualan barang A, B, C, dari tahun 2001-2007", col.main="red", font.main=4)
+
+
+```
